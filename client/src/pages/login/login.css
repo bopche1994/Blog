@@ -70,3 +70,10 @@
   color: white;
   padding: 8px;
 }
+
+.logintInfo {
+  font-family: 'Lora';
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: darkmagenta;
+}

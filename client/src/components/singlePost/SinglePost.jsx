@@ -60,6 +60,7 @@ export default function SinglePost() {
     }
     return (
         <div className="singlePost">
+            {user ? (
             <div className="singlePostWrapper">
                 {post.photo && (
                 <img 
@@ -119,9 +120,10 @@ export default function SinglePost() {
                 { updateMode ? (<textarea className="singlePostDescInput" value={desc} onChange={(e) =>setDesc(e.target.value)} />) : 
                     (<p className="singlePostDesc"> {desc}</p> )
                 }
-                {updateMode &&  <button className="singlePostButton" onClick={handleUpdate} >Update</button> }
-                
+                {updateMode &&  <button className="singlePostButton" onClick={handleUpdate} >Update</button> }    
             </div>
+            ):
+            (<p className="singlePostInfoFail">Please Login to see the full details</p>)} 
         </div>
     )
 }

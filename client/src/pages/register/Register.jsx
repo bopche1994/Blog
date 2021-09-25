@@ -28,18 +28,21 @@ export default function Register(props) {
             <form onSubmit={handleSubmit} className="registerForm">
                 <label > Username </label>
                 <input type="text" 
+                    required
                     className="registerInput" 
                     placeholder="Enter username"
                     onChange={(e) => setUsername(e.target.value)}
                 />
                 <label > Email </label>
                 <input type="email" 
+                    required
                     className="registerInput"
                     placeholder="Enter your email" 
                     onChange={(e) => setEmail(e.target.value)}    
                 />
                 <label > Password </label>
                 <input type="password" 
+                    required
                     className="registerInput" 
                     placeholder="Enter your password" 
                     onChange={(e) => setPassword(e.target.value)}
@@ -48,7 +51,7 @@ export default function Register(props) {
                 <button className="registerLoginButton" >
                     <Link to='/login' className="link"> Login </Link>
                 </button>
-                {error && <span>Something Went wromg </span>}
+                {error && <span className="registertInfoFail">Username alreat exists </span>}
             </form>
         </div>
     )
